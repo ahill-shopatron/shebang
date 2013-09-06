@@ -12,4 +12,4 @@ def nonewln(s):
 	if s.endswith('\n'): s = s[:-1]
 	return s
 
-print ','.join(map(nonewln, stdin))
+print ','.join(nonewln(l) for l in stdin)

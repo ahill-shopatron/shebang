@@ -6,11 +6,11 @@
 # Useful if you've got a column from a spreadsheet in the paste buffer, and need
 # to quote it for some reason.
 
-from __future__ import print_function # for mapping
 from sys import stdin
 
 def quote(s):
 	if s.endswith('\n'): s = s[:-1]
 	return "'"+s+"'"
 
-map(print, map(quote, stdin))
+for ln in (quote(l) for l in stdin):
+	print ln

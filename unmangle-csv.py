@@ -14,4 +14,4 @@ def demunge(line):
 reader = csv.reader(sys.stdin, delimiter='|')
 writer = csv.writer(sys.stdout, delimiter='|')
 
-writer.writerows(map(demunge, reader))
+writer.writerows(demunge(ln) for ln in reader))
