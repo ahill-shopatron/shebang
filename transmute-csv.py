@@ -19,4 +19,4 @@ aparse.add_argument('-o', '--output',
 
 args = aparse.parse_args()
 
-csv.writer(stdout, delimiter=args.input).writerows(csv.reader(stdin, delimiter=args.output))
+csv.writer(stdout, delimiter=args.output).writerows(csv.reader(stdin, delimiter=args.input))
