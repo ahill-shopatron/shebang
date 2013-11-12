@@ -3,12 +3,11 @@
 # Reads in a CSV with source URLs in the first column, and destination URLs
 # in the second column. Produces mod_rewrite rules on stdout.
 
-from urlparse import urlparse
-
 def rewrite(src, dest):
     return 'RewriteRule ^{0}$ {1} [NC,QSA,R=301,L]'.format(src, dest)
 
 if __name__ == '__main__':
+    from urlparse import urlparse
     import argparse
     import csv
 
